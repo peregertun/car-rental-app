@@ -1,0 +1,126 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.container {
+    background-image: linear-gradient(papayawhip, white);
+    padding-top: 40px;
+    padding: 40px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 250px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px #d4d4d4;
+    width: 80%;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: center;
+width: 100%;
+    background: white;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+h2 {
+font-size: 15px;
+float: left;
+}
+
+.form-button {
+    background-color: #d4d4d4;
+    border: none;
+    color: black;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.form-button:hover {
+    background-color: #b9b7b7;
+}
+
+.submit {
+    background-color: #d4d4d4;
+    border: none;
+    color: black;
+    padding: 13px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.submit:hover {
+    background-color: #b9b7b7;
+}
+
+/* .submit[disabled] {
+    background-color: #979494;
+} */
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 6px 0px 16px;
+    box-sizing: border-box;
+    border: 2px solid #d4d4d4;
+    border-radius: 4px;
+  }
+
+  input[type=text]:hover, input[type=number]:hover {
+   border: 2px solid #b9b7b7;
+  }
+
+  .customer-form{
+      display: flex;
+      justify-content: center;
+  }
+
+  .customerstable {
+    border-collapse: collapse;
+  }
+  
+  .customerstable, th, td {
+    border: 0px solid black;
+    padding: 2px;
+    text-align: left;
+  }
+
+  .customerstable input[type=submit] {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 0px 0px 5px;
+    box-sizing: border-box;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+  }
+
+  .customerstable input[type=submit]:hover {
+   background-color: #d4d4d4;
+  }
+
+  .divider {
+    padding: 16px;
+    /* width: 100%; */
+  }
+

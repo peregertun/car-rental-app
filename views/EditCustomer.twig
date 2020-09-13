@@ -1,0 +1,12 @@
+{% block editCustomer %}
+  <h1>Edit Customer</h1>
+
+  <form method="post" action="/customerEdited/{{customerNumber}}/{{customerName}}">
+    Name: <input type="text" id="customerName" name="customerName"
+           value="{{customerName}}" autofocus="autofocus">
+    <input type="submit" value="Ok" onClick="return validateName()">
+  </form>
+
+  <script type="text/javascript" src="script.js"></script>
+
+{% endblock %}

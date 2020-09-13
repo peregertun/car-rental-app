@@ -1,0 +1,22 @@
+{
+  "name": "peregertun/carrental",
+  "description": "app to rent cars",
+  "require-dev": {
+    "monolog/monolog": "^2.1"
+  },
+  "authors": [
+    {
+      "name": "Per Egertun",
+      "email": "per.egertun@chasacademy.se"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^2.1",
+    "twig/twig": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "carrental\\": "src"
+    }
+  }
+}

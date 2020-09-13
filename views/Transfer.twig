@@ -1,0 +1,33 @@
+{% block transfer %}
+  <h1>Transfer</h1>
+
+  <p>Transfer from account number {{fromAccountNumber}}, owned by {{fromCustomerName}}
+     (customer number {{fromCustomerNumber}}). <p>
+
+  <form method="post" action="/transferDone/{{fromCustomerNumber}}/{{fromCustomerName}}/{{fromAccountNumber}}">
+    <input type="hidden" name="fromCustomerNumber" value="{{fromCustomerNumber}}">
+    <input type="hidden" name="fromCustomerName" value="{{fromCustomerName}}">
+    <input type="hidden" name="fromAccountNumber" value="{{fromAccountNumber}}">
+
+    <table border="0">
+      <tr>
+        <td>To account:</td> <td><select name="toAccountInfo" autofocus="autofocus">
+
+        {% for accountInfo in accountInfoArray %}
+          echo "<option>{{accountInfo}}</option>";
+        {% endfor %}
+
+        </select></td>
+      </tr>
+
+      <tr>
+        <td>Amount:</td> <td><input type="text" name="amount" autofocus="autofocus"></td>
+      <tr>
+      <tr>
+        <td><input type="hidden" name="state" value="transferDone">
+            <input style="width:100%" type="submit" value="Ok"></td>
+      </tr>
+    </table>
+  </form>
+  <hr>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% block viewAccount %}
+  <h1>View Account</h1>
+
+  {% if ((accountEvents | length) > 0) %}
+    <p>The events of account number {{accountNumber}},
+       owned by {{customerName}} with number {{customerNumber}}.</p>
+            
+    <table border>
+      <tr><th>Time</th><th>Amount</th></tr>
+
+      <!-- foreach accountEvents as accountEvent -->
+      {% for accountEvent in accountEvents %}
+        <tr>
+          <td>{{accountEvent.time}}</td><td>{{accountEvent.amount}}</td>
+        </tr>
+      {% endfor %}
+      
+      <tr>
+        <td>Balance</td><td>{{accountBalance}}</td>
+      </tr>
+    </table>
+  {% else %}
+    <p>Account number {{accountNumber}}, owned by {{customerName}}
+       with number {{customerNumber}}, has no events.</p>
+  {% endif %}
+  
+  <p/>
+  
+  <form method="post" action="/">
+    <input type="submit" value="Ok">
+  </form>
+{% endblock %}
